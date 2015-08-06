@@ -19,15 +19,15 @@ B=4
 if useFabricabilityCondition then
 	maxHeight = heightFabricabilityLimit
 	minSpacing = spacingFabricabilityLimit
-	fabCondStr = "Fab_h"+maxHeight+"_s"+minSpacing_
+	fabCondStr = "Fab_h" .. maxHeight .. "_s" .. minSpacing_
 else
 	maxHeight = 2*math.pi*lambda_0*(n_SU8-n_air)   --Equivalent to 2pi for thin element approximation
 	minSpacing = 0
-	fabCondStr = "Unfab_h"+maxHeight+"_s"+minSpacing_
+	fabCondStr = "Unfab_h" .. maxHeight .. "_s" .. minSpacing_
 end
 
 
-filename = "multistepdata_"+nLevels+"levels_" + fabCondStr+"_"+nTries+"tries"
+filename = "multistepdata_" nLevels .. "levels_" + fabCondStr+"_"+nTries+"tries"
 file = io.open(filename, "w")
 
 
