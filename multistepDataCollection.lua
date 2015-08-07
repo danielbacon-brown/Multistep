@@ -172,7 +172,7 @@ for iter = 1,nTries,1 do
     
 	--Write data to file
 	for key,value in pairs(forw) do 
-		file:write(forw[key][1],',', forw[key][2],',', forw[key][3],',', forw[key][4],',', forw[key][5],',', forw[key][6],',  \r\n' ) 
+		file:write(forw[key][1],',', forw[key][2],',', forw[key][3],',', forw[key][4],',', forw[key][5],',', forw[key][6],' \r\n' ) 
 	end
 	
 	--Sa:OutputStructurePOVRay('modeltest.pov')
