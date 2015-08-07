@@ -11,7 +11,7 @@ period = lambda_0 /n_SU8 * 3/(2*math.sqrt(2))   --um  --should be square
 
 --Set Parameters:
 nLevels=2
-nTries = 10000
+nTries = 1000
 useFabricabilityCondition = 1   -- whether these simulations are limited in feature size and height
 heightFabricabilityLimit = 0.5   --um
 spacingFabricabilityLimit = 0.1*period  --um
@@ -172,7 +172,7 @@ for iter = 1,nTries,1 do
     
 	--Write data to file
 	for key,value in pairs(forw) do 
-		file:write(forw[key][1],',', forw[key][2],',', forw[key][3],',', forw[key][4],',', forw[key][5],',', forw[key][6],',     ' ) 
+		file:write(forw[key][1],',', forw[key][2],',', forw[key][3],',', forw[key][4],',', forw[key][5],',', forw[key][6],',  \r\n' ) 
 	end
 	
 	--Sa:OutputStructurePOVRay('modeltest.pov')
